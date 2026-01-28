@@ -1,0 +1,43 @@
+{
+    "HomePage": {
+        "title": "Narzędzie Kontekstu Nauczyciela",
+        "about": "Przejdź do Panelu"
+    },
+    "Auth": {
+        "signIn": "Zaloguj się",
+        "signOut": "Wyloguj się"
+    },
+    "Dashboard": {
+        "title": "Twoi Uczniowie",
+        "addStudent": "Dodaj Ucznia",
+        "addStudentDesc": "Dodaj nowego ucznia. Plan darmowy limitowany jest do 2 uczniów.",
+        "studentName": "Imię",
+        "save": "Zapisz",
+        "limitReached": "Limit osiągnięty! Przejdź na PRO.",
+        "genericError": "Coś poszło nie tak.",
+        "ready": "Gotowy",
+        "pendingSummary": "Czeka Podsumowanie",
+        "startLesson": "Start Lekcji",
+        "summary": "Podsumuj",
+        "actions": "Akcje",
+        "edit": "Edytuj",
+        "archive": "Archiwizuj"
+    },
+    "Lesson": {
+        "note": "Notatka",
+        "homework": "Zadanie",
+        "error": "Poprawa",
+        "insight": "Wnioski",
+        "emptyState": "Zacznij pisać, aby dodać notatki...",
+        "inputPlaceholder": "Wpisz notatkę lub użyj /hw, /err, /in..."
+    },
+    "Summary": {
+        "rawEntries": "Surowe Wpisy",
+        "activeGoal": "Główny Cel",
+        "focusAreas": "Obszary Skupienia",
+        "homework": "Zadanie Domowe",
+        "backlog": "Backlog (Pomysły)",
+        "limitReached": "Osiągnięto limit!",
+        "commit": "Zatwierdź i Zakończ"
+    }
+}

@@ -1,0 +1,43 @@
+{
+  "HomePage": {
+    "title": "Teacher's Context Tool",
+    "about": "Go to Dashboard"
+  },
+  "Auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out"
+  },
+  "Dashboard": {
+    "title": "Your Students",
+    "addStudent": "Add Student",
+    "addStudentDesc": "Add a new student to your list. Free tier is limited to 2 students.",
+    "studentName": "Name",
+    "save": "Save",
+    "limitReached": "Limit reached! Please upgrade to Pro.",
+    "genericError": "Something went wrong.",
+    "ready": "Ready",
+    "pendingSummary": "Pending Summary",
+    "startLesson": "Start Lesson",
+    "summary": "Summary",
+    "actions": "Actions",
+    "edit": "Edit",
+    "archive": "Archive"
+  },
+  "Lesson": {
+    "note": "Note",
+    "homework": "Homework",
+    "error": "Correction",
+    "insight": "Insight",
+    "emptyState": "Start typing to add notes...",
+    "inputPlaceholder": "Type a note or use /hw, /err, /in..."
+  },
+  "Summary": {
+    "rawEntries": "Raw Entries",
+    "activeGoal": "Active Goal",
+    "focusAreas": "Focus Areas",
+    "homework": "Homework",
+    "backlog": "Backlog (Parking Lot)",
+    "limitReached": "Limit reached!",
+    "commit": "Commit & Finish"
+  }
+}
