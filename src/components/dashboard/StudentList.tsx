@@ -65,7 +65,7 @@ export function StudentList({ students }: StudentListProps) {
                         : student.latestCard?.homework?.text;
 
                     return (
-                        <Card key={student.id} className="hover:shadow-lg transition-all duration-200 flex flex-col border-t-4 border-t-transparent hover:border-t-primary/20">
+                        <Card key={student.id} className="glass-card flex flex-col border-none">
                             <CardHeader className="pb-3 relative">
                                 <div className="flex justify-between items-start mb-1">
                                     <div className="pr-8">
