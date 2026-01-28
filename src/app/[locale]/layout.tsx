@@ -4,6 +4,9 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { ClerkProvider } from '@clerk/nextjs';
+import { Navbar } from '@/components/layout/Navbar';
+import { isAdmin } from '@/actions/admin';
 import "../globals.css";
 
 const geistSans = Geist({
@@ -36,15 +39,19 @@ export default async function RootLayout({
   }
 
   const messages = await getMessages();
+  const admin = await isAdmin();
 
   return (
     <html lang={locale}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
+        <ClerkProvider>
+          <NextIntlClientProvider messages={messages}>
+            <Navbar isAdmin={admin} />
+            {children}
+          </NextIntlClientProvider>
+        </ClerkProvider>
       </body>
     </html>
   );

@@ -27,7 +27,9 @@ export const students = pgTable("students", {
     name: text("name").notNull(),
     accessToken: uuid("access_token").defaultRandom().unique(),
     status: studentStatusEnum("status").notNull().default('active'),
-    preferredViewLanguage: varchar("preferred_view_language", { length: 5 }).default('pl'), // Default to PL for now or match teacher
+    preferredViewLanguage: varchar("preferred_view_language", { length: 5 }).default('pl'),
+    targetLanguage: text("target_language"), // e.g. "English B2"
+    privateNote: text("private_note"), // Teacher's private notes
 });
 
 export const sessions = pgTable("sessions", {
@@ -54,7 +56,7 @@ export const studentCards = pgTable("student_cards", {
     data: jsonb("data").$type<{
         active_goal: string;
         focus_areas: string[];
-        homework: string;
+        homework: string | { text: string; done: boolean };
         backlog: string[];
     }>(),
     createdAt: timestamp("created_at").defaultNow(),

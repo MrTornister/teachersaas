@@ -12,7 +12,9 @@
         "addStudent": "Dodaj Ucznia",
         "addStudentDesc": "Dodaj nowego ucznia. Plan darmowy limitowany jest do 2 uczniów.",
         "studentName": "Imię",
+        "name": "Imię",
         "save": "Zapisz",
+        "add": "Dodaj",
         "limitReached": "Limit osiągnięty! Przejdź na PRO.",
         "genericError": "Coś poszło nie tak.",
         "ready": "Gotowy",
@@ -21,7 +23,8 @@
         "summary": "Podsumuj",
         "actions": "Akcje",
         "edit": "Edytuj",
-        "archive": "Archiwizuj"
+        "archive": "Archiwizuj",
+        "continueLesson": "Kontynuuj Lekcję"
     },
     "Lesson": {
         "note": "Notatka",
@@ -39,5 +42,22 @@
         "backlog": "Backlog (Pomysły)",
         "limitReached": "Osiągnięto limit!",
         "commit": "Zatwierdź i Zakończ"
+    },
+    "Subscription": {
+        "freeTier": "Darmowy",
+        "proTier": "PRO",
+        "studentLimit": "Uczniowie",
+        "upgradeToPro": "Przejdź na PRO"
+    },
+    "Admin": {
+        "title": "Panel Administratora",
+        "email": "Email",
+        "tier": "Plan",
+        "students": "Uczniowie",
+        "created": "Data utworzenia",
+        "actions": "Akcje",
+        "upgrade": "Upgrade na PRO",
+        "downgrade": "Downgrade na Free",
+        "updating": "Aktualizacja..."
     }
 }

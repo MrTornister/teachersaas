@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { Card } from '@/components/ui/card';
 import { CheckCircle2 } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import { PublicHomework } from '@/components/public/PublicHomework';
 
 export default async function PublicStudentPage({ params }: { params: Promise<{ token: string }> }) {
     const { token } = await params;

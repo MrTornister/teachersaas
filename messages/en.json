@@ -12,7 +12,9 @@
     "addStudent": "Add Student",
     "addStudentDesc": "Add a new student to your list. Free tier is limited to 2 students.",
     "studentName": "Name",
+    "name": "Name",
     "save": "Save",
+    "add": "Add",
     "limitReached": "Limit reached! Please upgrade to Pro.",
     "genericError": "Something went wrong.",
     "ready": "Ready",
@@ -21,7 +23,8 @@
     "summary": "Summary",
     "actions": "Actions",
     "edit": "Edit",
-    "archive": "Archive"
+    "archive": "Archive",
+    "continueLesson": "Continue Lesson"
   },
   "Lesson": {
     "note": "Note",
@@ -39,5 +42,22 @@
     "backlog": "Backlog (Parking Lot)",
     "limitReached": "Limit reached!",
     "commit": "Commit & Finish"
+  },
+  "Subscription": {
+    "freeTier": "Free",
+    "proTier": "PRO",
+    "studentLimit": "Students",
+    "upgradeToPro": "Upgrade to PRO"
+  },
+  "Admin": {
+    "title": "Admin Panel",
+    "email": "Email",
+    "tier": "Tier",
+    "students": "Students",
+    "created": "Created",
+    "actions": "Actions",
+    "upgrade": "Upgrade to PRO",
+    "downgrade": "Downgrade to Free",
+    "updating": "Updating..."
   }
 }

@@ -3,7 +3,7 @@
 import { useState, useRef, useOptimistic, useTransition } from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { addEntry } from '@/actions/lesson';
+import { addEntry, stopSession } from '@/actions/lesson';
 import { Loader2, Square } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
@@ -31,7 +31,10 @@ export function LessonManager({ sessionId, initialEntries }: LessonInputProps) {
     const [isPending, startTransition] = useTransition();
     const formRef = useRef<HTMLFormElement>(null);
 
-    const handleStop = () => {
+    const handleStop = async () => {
+        // Change status to pending_summary
+        await stopSession(sessionId);
+
         const path = window.location.pathname; // /pl/lesson/uuid
         router.push(`${path}/summary`);
     };

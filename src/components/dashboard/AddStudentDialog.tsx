@@ -55,7 +55,7 @@ export function AddStudentDialog() {
                     <div className="grid gap-4 py-4">
                         <div className="grid grid-cols-4 items-center gap-4">
                             <Label htmlFor="name" className="text-right">
-                                {t('studentName')}
+                                {t('name')}
                             </Label>
                             <Input
                                 id="name"
@@ -64,10 +64,32 @@ export function AddStudentDialog() {
                                 required
                             />
                         </div>
+                        <div className="grid grid-cols-4 items-center gap-4">
+                            <Label htmlFor="targetLanguage" className="text-right">
+                                Target Lang
+                            </Label>
+                            <Input
+                                id="targetLanguage"
+                                name="targetLanguage"
+                                className="col-span-3"
+                                placeholder="e.g. English B2"
+                            />
+                        </div>
+                        <div className="grid grid-cols-4 items-center gap-4">
+                            <Label htmlFor="privateNote" className="text-right">
+                                Private Note
+                            </Label>
+                            <Input
+                                id="privateNote"
+                                name="privateNote"
+                                className="col-span-3"
+                                placeholder="Only visible to you"
+                            />
+                        </div>
                     </div>
-                    {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+                    {error && <p className="text-red-500 mb-4">{error}</p>}
                     <DialogFooter>
-                        <Button type="submit">{t('save')}</Button>
+                        <Button type="submit">{t('add')}</Button>
                     </DialogFooter>
                 </form>
             </DialogContent>

@@ -49,7 +49,10 @@ export async function commitSummary(studentId: string, data: {
     await db.insert(studentCards).values({
         studentId,
         version: new Date().toISOString(), // Simple versioning
-        data: data
+        data: {
+            ...data,
+            homework: { text: data.homework, done: false }
+        }
     });
 
     // 2. Close the session (if valid)

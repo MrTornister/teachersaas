@@ -48,12 +48,21 @@ export async function startSession(studentId: string) {
     const existing = await getActiveSession(studentId);
     if (existing) return existing;
 
+    // CHECK: Does student have a pending summary?
+    const latestSession = await db.query.sessions.findFirst({
+        where: eq(sessions.studentId, studentId),
+        orderBy: [desc(sessions.startedAt)]
+    });
+
+    if (latestSession?.status === 'pending_summary') {
+        throw new Error("PENDING_SUMMARY");
+    }
+
     const [newSession] = await db.insert(sessions).values({
         studentId,
         status: 'in_progress'
     }).returning();
 
-    revalidatePath(`/lesson/${studentId}`);
     return newSession;
 }
 
@@ -65,12 +74,24 @@ export async function addEntry(sessionId: string, content: string, type: 'note' 
         content,
         type
     });
-
-    revalidatePath(`/lesson`);
 }
 
 export async function getSessionEntries(sessionId: string) {
     return db.select().from(rawEntries)
         .where(eq(rawEntries.sessionId, sessionId))
         .orderBy(desc(rawEntries.createdAt));
+}
+
+export async function stopSession(sessionId: string) {
+    await getTeacher(); // auth check
+
+    await db.update(sessions)
+        .set({
+            status: 'pending_summary',
+            endedAt: new Date()
+        })
+        .where(eq(sessions.id, sessionId));
+
+    // No revalidate needed as we redirect immediately usually, but good practice
+    revalidatePath('/dashboard');
 }
